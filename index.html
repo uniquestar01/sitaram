@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Saloni 🎂</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ===== SCENE 1: WELCOME ===== -->
+<div id="scene1" class="scene active">
+  <canvas id="starsCanvas"></canvas>
+  <div class="particles-container" id="particles1"></div>
+  <div class="scene1-content">
+    <div class="welcome-emoji animate-float">✨</div>
+    <h1 class="welcome-title" id="welcomeTitle"></h1>
+    <p class="welcome-sub" id="welcomeSub"></p>
+    <button class="glow-btn" id="surpriseBtn" style="opacity:0;pointer-events:none">Tap Here for Your Surprise 🎁</button>
+  </div>
+</div>
+
+<!-- ===== SCENE 2: BIRTHDAY REVEAL ===== -->
+<div id="scene2" class="scene">
+  <canvas id="fireworksCanvas"></canvas>
+  <div class="balloons-container" id="balloons"></div>
+  <div class="scene2-content">
+    <div class="birthday-emoji animate-bounce">🎂</div>
+    <h1 class="birthday-title" id="bdayTitle">Happy Birthday<br><span class="name-glow">Saloni</span></h1>
+    <div class="sparkles-row">✨🌟💖🌟✨</div>
+    <button class="glow-btn glow-btn--pink" id="nextScene2">Read Your Message 💌</button>
+  </div>
+  <canvas id="confettiCanvas2"></canvas>
+</div>
+
+<!-- ===== SCENE 3: SPECIAL MESSAGE ===== -->
+<div id="scene3" class="scene">
+  <div class="particles-container" id="particles3"></div>
+  <div class="scene3-content">
+    <div class="glass-card message-card">
+      <div class="card-top-emoji">💌</div>
+      <h2 class="card-heading">A Special Message</h2>
+      <p class="typed-text" id="typedMessage"></p>
+    </div>
+    <button class="glow-btn glow-btn--purple" id="nextScene3" style="opacity:0;pointer-events:none">Blow Out the Candles 🕯️</button>
+  </div>
+</div>
+
+<!-- ===== SCENE 4: INTERACTIVE CAKE ===== -->
+<div id="scene4" class="scene">
+  <div class="particles-container" id="particles4"></div>
+  <canvas id="confettiCanvas4" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:5"></canvas>
+  <div class="scene4-content">
+    <h2 class="section-title">Make a Wish, Saloni! 🌟</h2>
+    <div class="cake-wrapper">
+      <div class="candles-row" id="candlesRow">
+        <div class="candle" data-id="0"><div class="flame" id="flame0"></div></div>
+        <div class="candle" data-id="1"><div class="flame" id="flame1"></div></div>
+        <div class="candle" data-id="2"><div class="flame" id="flame2"></div></div>
+        <div class="candle" data-id="3"><div class="flame" id="flame3"></div></div>
+        <div class="candle" data-id="4"><div class="flame" id="flame4"></div></div>
+      </div>
+      <div class="cake-body">
+        <div class="cake-tier cake-tier--top">🌸 Saloni 🌸</div>
+        <div class="cake-tier cake-tier--mid">💖 Happy Birthday 💖</div>
+        <div class="cake-tier cake-tier--bot"></div>
+      </div>
+      <div class="cake-plate"></div>
+    </div>
+    <p class="cake-hint" id="cakeHint">Tap the candles to blow them out!</p>
+    <button class="glow-btn glow-btn--pink" id="blowAllBtn">Blow All 💨</button>
+    <button class="glow-btn glow-btn--purple" id="nextScene4" style="display:none">Play Balloon Game 🎈</button>
+  </div>
+</div>
+
+<!-- ===== SCENE 5: BALLOON GAME ===== -->
+<div id="scene5" class="scene">
+  <div class="scene5-content">
+    <h2 class="section-title">Pop the Balloons! 🎈</h2>
+    <div class="score-board">Score: <span id="score">0</span> | Popped: <span id="popped">0</span>/15</div>
+    <div class="game-area" id="gameArea"></div>
+    <p class="game-hint">Tap balloons to pop them!</p>
+    <button class="glow-btn glow-btn--purple" id="nextScene5" style="display:none">Open Your Gift 🎁</button>
+  </div>
+</div>
+
+<!-- ===== SCENE 6: GIFT SURPRISE ===== -->
+<div id="scene6" class="scene">
+  <div class="particles-container" id="particles6"></div>
+  <canvas id="confettiCanvas6" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:5"></canvas>
+  <div class="scene6-content">
+    <h2 class="section-title">Your Special Gift 🎁</h2>
+    <div class="gift-wrapper" id="giftBox" title="Click to open!">
+      <div class="gift-lid" id="giftLid">
+        <div class="gift-ribbon-h"></div>
+        <div class="gift-bow">🎀</div>
+      </div>
+      <div class="gift-body">
+        <div class="gift-ribbon-v"></div>
+      </div>
+      <div class="gift-glow-particles" id="giftParticles" style="display:none"></div>
+    </div>
+    <p class="gift-hint" id="giftHint">Click the gift to open it! 🌟</p>
+    <div class="final-message glass-card" id="finalMessage" style="display:none">
+      <div class="final-emoji">💖</div>
+      <p class="final-text">You are truly special,<br><span class="name-glow">Saloni</span> 💖</p>
+      <p class="final-sub">May every day of your life shine as bright as you do. 🌟</p>
+      <button class="glow-btn glow-btn--pink" id="restartBtn">🔁 Replay the Magic</button>
+    </div>
+  </div>
+</div>
+
+<!-- Music (auto-generated tone) -->
+<audio id="bgMusic" loop></audio>
+
+<script src="app.js"></script>
+</body>
+</html>
