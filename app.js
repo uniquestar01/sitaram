@@ -1,5 +1,5 @@
 /* ============================================================
-   app.js  –  Ataul Birthday Website
+   app.js  –  Sitaram Birthday Website
    ============================================================ */
 
 // ── Utility ──────────────────────────────────────────────────
@@ -37,7 +37,7 @@ function onSceneEnter(n) {
   const sub      = $('welcomeSub');
   const btn      = $('surpriseBtn');
 
-  const line1 = 'Hey Ataul… ✨';
+  const line1 = 'Hey Sitaram… ✨';
   const line2 = 'Someone made something special just for you';
 
   typeText(title, line1, 60, () => {
@@ -223,7 +223,7 @@ function playBirthdayTune() {
 // ── SCENE 3 – Special Message ─────────────────────────────────
 function startScene3() {
   spawnParticles('particles3', 20, ['#ff6eb4','#c084fc','#ffd700']);
-  const message = `Dear Ataul,\n\nToday is a very special day because it is the day someone amazing was born.\n\nYour smile is bright like stars, and your presence makes everything better.\n\nMay your life always be filled with happiness, dreams, and beautiful moments.\n\nWishing you a wonderful birthday full of love, laughter, and surprises.\n\nOnce again...\n\nHappy Birthday Ataul 🎉`;
+  const message = `Dear Sitaram,\n\nToday is a very special day because it is the day someone amazing was born.\n\nYour smile is bright like stars, and your presence makes everything better.\n\nMay your life always be filled with happiness, dreams, and beautiful moments.\n\nWishing you a wonderful birthday full of love, laughter, and surprises.\n\nOnce again...\n\nHappy Birthday Sitaram 🎉`;
   const el = $('typedMessage');
   const btn = $('nextScene3');
   const cursor = document.createElement('span');

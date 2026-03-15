@@ -1,5 +1,5 @@
 /* =========================================
-   BIRTHDAY WEBSITE – ATAUL
+   BIRTHDAY WEBSITE – SITARAM
    style.css
    ========================================= */
 
@@ -422,4 +422,42 @@ canvas {
   .cake-tier--mid { width: 170px; }
   .cake-tier--bot { width: 200px; }
   .cake-plate     { width: 220px; }
+}
+/* ===== ELEGANT FOOTER ===== */
+.elegant-footer {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: footerFadeIn 3s forwards 2s;
+  letter-spacing: 1px;
+  pointer-events: none; /* Let clicks pass through except for the link */
+}
+
+.footer-link {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  position: relative;
+}
+
+.footer-link:hover {
+  color: var(--pink);
+  text-shadow: 0 0 8px var(--pink);
+}
+
+@keyframes footerFadeIn {
+  from { opacity: 0; transform: translate(-50%, 10px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
